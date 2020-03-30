@@ -30,6 +30,7 @@ export default function App(props) {
           'Medium':require('./assets/fonts/Montserrat-Medium.ttf'),
           'Bold':require('./assets/fonts/Montserrat-Bold.ttf'),
           'SemiBold':require('./assets/fonts/Montserrat-SemiBold.ttf'),
+          'Instagram':require('./assets/fonts/Rochester-Regular.ttf'),
         });
       } catch (e) {
         // We might want to provide this error information to an error reporting service

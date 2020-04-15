@@ -20,43 +20,11 @@ const products = [
    
   const [product, setProducts] = useState([]);
 
-
-  
-
-
   return (
     <View style={styles.container}>
-       <View style={{paddingTop:30}}>
-          {/* <View style={{alignItems:'center',flexDirection:'row',justifyContent:'space-between'}}>
-              <View style={{paddingLeft:20}}>
-                <Text style={{fontSize:18,fontFamily:'Medium',letterSpacing:-2,color:'grey'}}>Our</Text>
-                <Text style={{fontSize:20,fontFamily:'Medium',letterSpacing:-1}}>Products</Text>
-              </View>
-               <View style={{flexDirection:'column',alignItems:'center',paddingRight:20}}>
-                  <Text style={{fontSize:20,fontFamily:'Medium',letterSpacing:-1}}>Cart: {product.length}</Text>
-                  <TouchableOpacity onPress={()=>{setProducts([])}} accessible={true}  accessibilityLabel="Tap me!">
-                        <View  style={{borderRadius:2,backgroundColor:Colors.black,padding:10}}>
-                            <Text style={styles.btnText}>Clear</Text>
-                        </View>
-                    </TouchableOpacity>
-              </View>
-          </View> */}
-          <View style={{paddingHorizontal:30,flexDirection:'row',alignItems:'center',justifyContent:'space-between'}}>
-             <TouchableOpacity onPress={()=>{navigation.openDrawer()}}>
-                <Feather name="menu" size={20} color="black"/>
-             </TouchableOpacity>
-              <View>
-                <TouchableOpacity onPress={()=>{ navigation.navigate("Orders",{product});}}>
-                 <View  style={{flexDirection:'row',alignItems:'center'}}>
-                  <SimpleLineIcons name="basket" size={24} color="black"/>
-                    <Text style={{fontSize:16,fontFamily:'Regular',letterSpacing:-1,paddingLeft:10}}>{product.length}</Text>
-                 </View>
-              </TouchableOpacity>
-              </View>
-          </View>
+       <View style={{paddingTop:10}}>
           <FlatList
             data={products}
-           // extraData={products}
             horizontal={false}
             showsVerticalScrollIndicator={false}
             keyExtractor={(item)=> item.id.toString()}
@@ -85,7 +53,7 @@ const products = [
                                   <TouchableOpacity onPress={()=>{
                                     
                                     setProducts([...product, item])
-                                    console.log(product)
+                                    // console.log(product)
                                     }
                                    
                                     } activeOpacity={0.6} accessible={true}  accessibilityLabel="Tap me!">

@@ -1,14 +1,12 @@
 import React from 'react'
 import { View,Text,StyleSheet,FlatList,Image,TouchableOpacity } from 'react-native'
-import Colors from '../../constants/Colors'
-import Header from '../../components/Header'
+import Colors from '../constants/Colors'
+import Header from '../components/Header'
 import { AntDesign } from '@expo/vector-icons'
 
 export default function Orders({route,navigation}){
 
     const { product } = route.params;
-
-    // console.log(route.params)
 
     function getTotalAmount(){
         let amount = 0;
@@ -29,7 +27,6 @@ export default function Orders({route,navigation}){
     }
     return(
             <View style={styles.container}>
-             {/* <Header leftAction={renderLeftAction()}/> */}
                 <View style={{flexDirection:'row',alignItems:'center',paddingHorizontal:20,justifyContent:'space-between'}}>
                     <Text style={styles.NumOfItems}>Items : {product.length}</Text>
                     <Text style={styles.totalPrice}>Total Price : ${getTotalAmount()}</Text>
